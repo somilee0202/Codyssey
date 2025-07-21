@@ -78,8 +78,11 @@ def draw_map_with_path(df: pd.DataFrame, path: list[tuple], filename="map_final.
     # ✅ y 좌표 변환 (위 → 아래)
     df["y_draw"] = y_max - df["y"] + 1
 
+    # ✅ area == 1 또는 MyHome만 필터링 (시각화 용도만)
+    df_filtered = df[(df["area"] == 1) | (df["struct"] == "MyHome")]
+
     # 3. 각 건물 시각화
-    for _, row in df.iterrows():
+    for _, row in df_filtered.iterrows():
         x = row["x"]
         y = row["y_draw"]
         category = row["category"]

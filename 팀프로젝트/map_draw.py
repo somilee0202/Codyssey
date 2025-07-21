@@ -4,6 +4,11 @@ import matplotlib.pyplot as plt
 def generate_map():
     # 1. 데이터 불러오기
     df = pd.read_csv("map_data.csv")
+    df.columns = df.columns.str.strip()
+    df = df.apply(lambda col: col.map(lambda x: x.strip() if isinstance(x, str) else x))
+
+    # ✅ area가 1이거나 MyHome인 경우만 필터링
+    df = df[(df["area"] == 1) | (df["struct"] == "MyHome")]
 
     # 2. 시각화 크기 및 축 생성
     plt.figure(figsize=(10, 10))
