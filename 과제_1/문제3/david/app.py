@@ -17,4 +17,8 @@ def home():
     return Response(fp.getvalue(), mimetype='audio/mpeg')
 
 if __name__ == '__main__':
+<<<<<<< HEAD
+    app.run('0.0.0.0', 80) 
+=======
     app.run('0.0.0.0', 8080, debug=True)
+>>>>>>> 94ee89c8ad0ffe776f95d380fa0f4dde52f9d238
