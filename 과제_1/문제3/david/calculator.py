@@ -1,24 +1,40 @@
+def add(a, b):
+    print(f"Result: <{a + b}>")
+    return
+
+def sub(a, b):
+    print(f"Result: <{a - b}>")
+    return
+
+def mul(a, b):
+    print(f"Result: <{a * b}>")
+    return
+
+def div(a, b):
+    if b == 0:
+        print("Error: Division by zero.")
+    else:
+        print(f"Result: <{a / b}>")
+    return
+
 def cal():
     try:
-        a = float(input("Input number1: "))
-        b = float(input("Input number2: "))
+        a = int(input("Enter number1: "))
+        b = int(input("Enter number2: "))
     except ValueError:
         print("Invalid number input.")
         return
     
-    operator = input("Input Operator: ")
+    operator = input("Enter Operator: ")
 
     if operator == "+":
-        print(a + b)
+        add(a, b)
     elif operator == "-":
-        print(a - b)
+        sub(a, b)
     elif operator == "*":
-        print(a * b)
+        mul(a, b)
     elif operator == "/":
-        if b == 0:
-            print("Error: Division by zero.")
-        else:
-            print(a / b)
+        div(a, b)
 
     else:
         print("Invalid operator." )
