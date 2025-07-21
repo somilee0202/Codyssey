@@ -7,10 +7,15 @@ def sort(arr):
     return arr
 
 def main():
-    arr = list(map(float, input("숫자들을 입력하세요: ").split()))
-    if len(arr) == 0:
-        print("Enter numbers")
+    try:
+        arr = list(map(float, input("숫자들을 입력하세요: ").split()))
+        if not arr: # arr이 비어있다면
+            print("Invalid Input.")
+            return
+    except:
+        print("Invalid Input")
         return
+
     sort(arr)
     print(f"min = {arr[0]}, max = {arr[-1]}")  # arr[-1] → 마지막 원소
 
