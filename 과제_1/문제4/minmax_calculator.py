@@ -17,7 +17,7 @@ def main():
         return
 
     sort(arr)
-    print(f"min = {arr[0]}, max = {arr[-1]}")  # arr[-1] → 마지막 원소
+    print(f"Min: {arr[0]}, Max: {arr[-1]}")  # arr[-1] → 마지막 원소
 
 if __name__ == "__main__":
     main()
