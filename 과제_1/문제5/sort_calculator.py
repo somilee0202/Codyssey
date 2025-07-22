@@ -18,7 +18,7 @@ def main():
 
     bubble_sort(arr)
     sorted = ' '.join(f"<{num}>" for num in arr)
-    print(f"Sorted: {sorted}")
+    print(f"Sorted: {sorted}") 
 
 if __name__ == "__main__":
     main()
