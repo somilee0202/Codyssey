@@ -16,7 +16,7 @@ def main():
         print("Invalid Input")
         return
 
-    sort(arr)
+    arr = sort(arr)
     print(f"Min: {arr[0]}, Max: {arr[-1]}")  # arr[-1] → 마지막 원소
 
 if __name__ == "__main__":

@@ -19,12 +19,7 @@ def div(a, b):
 
 def cal():
     try:
-<<<<<<< HEAD
         a, operator, b = input("Enter expression: ").split()
-        print(f"a= {a}, operator= {operator}, b= {b}")
-=======
-        a, operator, b = input("Enter expression: ").split(" ")
->>>>>>> 1771dd0ed1411b85a0fd513e43cda79321378eb0
     except ValueError as e:
         print(f"Error: {e}")
         return
